@@ -42,7 +42,7 @@ def url_factory(call_type, api_key, additional_data):
             return 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/' \
                    '{}?apikey={}'.format(additional_data, api_key)
     except SomeOtherError:
-        print('Some Other Error in url factory calls')
+        raise SomeOtherError()
 
 
 def get_location(user_zip):
@@ -64,7 +64,10 @@ def get_conditions(key):
     conditions_url = url_factory(url_calls.CONDITIONS, temp_key.curr_key, key)
     response = requests.get(conditions_url)
     json_version = response.json()
-    print("The current forecast is {}".format(json_version[0].get('WeatherText')))
+    try:
+        print("The current forecast is {}".format(json_version[0].get('WeatherText')))
+    except SomeOtherError:
+        raise SomeOtherError()
     return
 
 
@@ -90,6 +93,9 @@ def weather_check(user_in):
         get_forcast(location_key)
     except BadInput:
         raise BadInput()
+    except NoSuchLocation:
+        print("unable to find location")
+        raise BadInput()
     return
 
 
@@ -103,5 +109,6 @@ if __name__ == '__main__':
             weather_check(user_input)
             start_prog = input("press c to continue\nother keys to exit\nYour Input: ")
 
-    except NoSuchLocation:
-        print("Unable to find location")
+    except BadInput:
+        print("Bad Input Used")
+        raise BadInput()
