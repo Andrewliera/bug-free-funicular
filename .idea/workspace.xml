@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="972ef7c2-42fc-4789-906c-eccc2cae0eb0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Accuweather.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Accuweather.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/agoznzaga/Desktop/workspace/software-design/PycharmProjects/Accuweather&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/agoznzaga/PycharmProjects/TheRushdown&quot;
   }
 }</component>
   <component name="RecentsManager">

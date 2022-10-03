@@ -24,6 +24,7 @@ class temp_key():
     except SomeOtherError:
         print("An Error Occered with app.config")
 
+
 class url_calls(Enum):
     LOCATION = 1
     CONDITIONS = 2
@@ -46,7 +47,6 @@ def url_factory(call_type, api_key, additional_data):
 
 
 def get_location(user_zip):
-
     location_url = url_factory(url_calls.LOCATION, temp_key.curr_key, user_zip)
     response = requests.get(location_url)
 
@@ -60,7 +60,6 @@ def get_location(user_zip):
 
 
 def get_conditions(key):
-
     conditions_url = url_factory(url_calls.CONDITIONS, temp_key.curr_key, key)
     response = requests.get(conditions_url)
     json_version = response.json()
@@ -72,7 +71,6 @@ def get_conditions(key):
 
 
 def get_forcast(key):
-
     forecast_url = url_factory(url_calls.FORECASTS, temp_key.curr_key, key)
     response = requests.get(forecast_url)
     json_version = response.json()
@@ -81,6 +79,13 @@ def get_forcast(key):
         for i in range(0, 4):
             print(json_version['DailyForecasts'][i]['Date'] + " will be: "
                   + json_version['DailyForecasts'][i]['Day']['IconPhrase'])
+
+        #forecast = json_version.get('DailyForecasts')
+        #for date in forecast:
+         #   curr_day = date.get('Date')
+          #  day_con = date.get('IconPhrase')
+           # print("{} will be: {}".format(curr_day, day_con))
+
     except SomeOtherError:
         print("Some Other Error")
     return
