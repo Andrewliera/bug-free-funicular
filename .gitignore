@@ -1,4 +1,5 @@
-TheRushdown/
-instance/ 
-Domino/
-unit_tests/
+.gitignore
+.idea
+.idea/
+.venv
+app.config
