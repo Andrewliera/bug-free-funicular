@@ -1,10 +1,12 @@
 
 Feature: testing all card classes
   Scenario: test that rank stores value
-    When i make a new class
+    Given I have created a Rank object
+    When i make a new rank class
     Then the value of ranks is stored
 
-    When i make a new Class
+    Given i make a new Suit Object
+    When i make a new suit class
     Then the value of suit is stored
 
     Scenario: drawing a card removes it from the list

@@ -1,0 +1,15 @@
+Feature: testing all card classes
+
+  Scenario: test that rank stores value
+    Given I have created a Rank object ... passed in 0.000s
+    When i make a new rank class ... passed in 0.000s
+    Then the value of ranks is stored ... passed in 0.000s
+    Given i make a new Suit Object ... passed in 0.000s
+    When i make a new suit class ... passed in 0.000s
+    Then the value of suit is stored ... passed in 0.000s
+
+  Scenario: drawing a card removes it from the list
+    Given i have a set of cards ... passed in 0.000s
+    When i draw a card ... passed in 0.000s
+    Then It will be removed from the list ... passed in 0.000s
+

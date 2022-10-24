@@ -48,13 +48,15 @@ class Set:
         random.shuffle(self.card_set)
 
     def get_card(self):
-        self.card_set.pop()
+        drawn_card = self.card_set[0]
+        self.card_set = self.card_set[1:]
+        return self.card_set
 
 
-set = Set()
-set.print_self()
-set.shuffle()
-set.print_self()
-print("\n")
-set.get_card()
-set.print_self()
+#set = Set()
+#set.print_self()
+#set.shuffle()
+#set.print_self()
+#print("\n")
+#set.get_card()
+#set.print_self()
