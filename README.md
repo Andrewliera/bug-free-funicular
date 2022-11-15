@@ -25,6 +25,10 @@ Assignment 1.
 - [X] Tweak API key out of main.py, initialize a git repository and push the Accuweather API aaplication to github
     including an app.config.template file for future api keys
 
+Assignment 2.
+
 - [X] Make a program to create decks of cards, we want to use a OOP approach when making the Deck's cards, suits and ranks
+
+Assignment 3.
 
 - [X] In class we went over Test Driven Development and Behavior Driven Developmen, add Gherkin, Features and steps to the Card Game Project
